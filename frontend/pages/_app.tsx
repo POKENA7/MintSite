@@ -15,7 +15,7 @@ import { sepolia } from 'wagmi/chains'
 import '@rainbow-me/rainbowkit/styles.css'
 import { WagmiConfig, createClient, configureChains } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
-import Header from '@/component/header'
+import Header from '../component/Header'
 
 const clientSideEmotionCache = createEmotionCache()
 interface MyAppProps extends AppProps {
