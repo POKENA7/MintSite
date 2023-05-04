@@ -18,7 +18,7 @@ import {
 } from 'wagmi'
 import { ethers } from 'ethers'
 
-import SampleSale from '../../solidity/artifacts/contracts/SampleSale.sol/SampleSale.json'
+import SampleSale from '../component/web3/SampleSale.json'
 
 const sampleSaleContract = {
   address: '0x1bD73E93252204cF7a2aAff5B5cADECC05ebb712' as Address,
