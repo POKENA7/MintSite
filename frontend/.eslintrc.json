@@ -1,0 +1,53 @@
+{
+  // JavaScriptの実行環境を指定
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+
+  // 構文解析に使用するパーサーの指定
+  // デフォルトではES5しかパースできない
+  "parser": "@typescript-eslint/parser",
+
+  // parserのオプションを設定
+  // JSXやECMAScriptのバージョンの設定など
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+
+  // 任意のルール実行時に適用される追加の共有設定
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+
+  // 追加ルールの指定
+  // pluginsにルールを指定しても、ルールは適用されていない状態
+  // 追加ルールを適用する場合は、extendsかrulesで設定が必要
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+
+  // 共有設定の適用
+  // 各pluginで公開されている設定ファイルを指定することで、ルールの設定を適用
+  // ルール設定が重複する場合は、後から指定したものが適用される
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+
+  // 個別のルール設定
+  // extendsで指定した共有設定以外の個別設定
+  // 0:無効, 1:警告, 2: エラー
+  "rules": {
+    "react/props-types": 0,
+    "react/react-in-jsx-scope": 0
+  }
+}
